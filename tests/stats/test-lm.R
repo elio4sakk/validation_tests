@@ -10,13 +10,13 @@ cmod <- lm(mpg ~ cyl, data = mtcars)
 fmod <- lm(mpg ~ cyl_f, data = mtcars)
 
 test_that("lm returns the expected coefficients", {
-  expect_equal(coef(cmod)[2], -2.88, tolerance = 0.01, check.attributes = FALSE)
+  expect_equal(coef(cmod)[2], -2.88, tolerance = 0.01, ignore_attr = TRUE)
   
   means <- tapply(mtcars$mpg, mtcars$cyl, mean)
   coefs <- coef(fmod)
-  expect_equal(coefs[1], means[1], check.attributes = FALSE)
-  expect_equal(coefs[2], means[2] - means[1], check.attributes = FALSE)
-  expect_equal(coefs[3], means[3] - means[1], check.attributes = FALSE)
+  expect_equal(coefs[1], means[1], ignore_attr = TRUE)
+  expect_equal(coefs[2], means[2] - means[1], ignore_attr = TRUE)
+  expect_equal(coefs[3], means[3] - means[1], ignore_attr = TRUE)
 })
 
 # write.csv(mtcars, "mtcars.csv", row.names = FALSE)
