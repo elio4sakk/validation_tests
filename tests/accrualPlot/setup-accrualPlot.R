@@ -9,5 +9,5 @@ multi <- accrual_create_df(accrualdemo$date, by = accrualdemo$site)
 
 withr::defer({
   # rm(accrualdemo)
-  detach(package:accrualPlot)
+  # detach(package:accrualPlot)
 }, teardown_env())
