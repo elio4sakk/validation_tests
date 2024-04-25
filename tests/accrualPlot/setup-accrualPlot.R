@@ -8,6 +8,6 @@ mono <- accrual_create_df(accrualdemo$date)
 multi <- accrual_create_df(accrualdemo$date, by = accrualdemo$site)
 
 withr::defer({
-  # rm(accrualdemo)
-  # detach(package:accrualPlot)
+  rm(accrualdemo)
+  detach(package:accrualPlot)
 }, teardown_env())
