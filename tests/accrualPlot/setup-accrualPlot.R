@@ -1,4 +1,4 @@
-install.packages('accrualPlot')
+if(!require(accrualPlot)) install.packages('accrualPlot')
 library(accrualPlot)
 library(testthat)
 
