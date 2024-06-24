@@ -2,6 +2,7 @@
 # Consider the type of function:
 #   - is it deterministic or statistic?
 #   - is it worth checking for errors/warnings under particular conditions?
+local_edition(3) # use testthat 3rd edition syntax (waldo)
 
 data(mtcars)
 mtcars$cyl_f <- factor(mtcars$cyl)
